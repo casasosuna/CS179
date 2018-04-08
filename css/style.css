@@ -2738,6 +2738,14 @@ nav.w3agile_paging {
 	margin-top: 20px;
 	overflow: hidden
 }
+#status {
+	margin-top: 55px;
+}
+.attachbutton {
+	border-style: solid;
+	color: #24AB00;
+	float: right;
+}
 .postbutton {
 	border-style: solid;
 	color: #24AB00;
