@@ -29,7 +29,19 @@
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
+
+
+		$("#change").click(function(event){
+			$(".flex-container .column p").css("color", "blue")
+    	});
 	});
+
+	//document.getElementById('change').onclick = changeColor;   
+
+    //function changeColor() {
+        //document.body.style.color = "purple";
+        //return false;
+    //}
 </script>
 </head>
 <body class="bg">
@@ -181,7 +193,7 @@
   <div class="column">Type of activity</div>
 </div>
 <div class="row">
-  <div class="column">Crazy Dancers</div>
+  <div class="column"><p id="change">Crazy Dancers</p></div>
   <div class="column">Cumbia Dancing</div>
 </div>
 <div class="row">
