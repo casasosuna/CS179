@@ -2792,3 +2792,9 @@ h5 {
 h5 {
 	margin-top: 10px;
 }
+
+.homephoto{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
