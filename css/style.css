@@ -6,6 +6,10 @@
     flex: 50%;
 }
 
+.flex-container .column p {
+  color: black;
+}
+
 body{
 	margin:0;
 	font-family: 'Roboto', sans-serif; 

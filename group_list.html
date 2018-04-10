@@ -34,6 +34,16 @@
 		$("#change").click(function(event){
 			$(".flex-container .column p").css("color", "blue")
     	});
+
+    	$('.drop').change(function(e){
+      	// this function runs when a user selects an option from a <select> element
+      	window.location.href = $(".drop option:selected").attr('value');
+   		});
+
+    	//$(".button").click(function(event){
+		//if ($(".flex-container .column p").css("color", "blue")) {
+
+		//}
 	});
 
 	//document.getElementById('change').onclick = changeColor;   
@@ -206,7 +216,16 @@
 </div>
 </div>
 
-<button type="button" style="color: green">Request to join</button>
+<a href="inside_group.html" class="button">Join Selected Group</a>
+
+<form name="jump" class="center">
+<select name="menu" class='drop'>
+<option value="#">Select an option</option>
+<option value="inside_group.html">Crazy Dancers (Cumbia Dancing)</option>
+<option value="index.html">Anime Geeks (Discussing Anime)</option>
+<option value="new_group.html">Jam Club (Playing Rock Music)</option>
+</select>
+
 
 			<div class="clearfix"> </div>
 		</div>
