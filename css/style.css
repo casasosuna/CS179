@@ -2731,7 +2731,7 @@ nav.w3agile_paging {
 }
 .boxed {
 	margin:	auto;
-	width: 50%;
+	width: 100%;
 	padding: 30px;
 	border-style: solid;
 	color: #5B5B5B;
@@ -2740,6 +2740,7 @@ nav.w3agile_paging {
 }
 #status {
 	margin-top: 55px;
+	margin-bottom: 10px;
 }
 .attachbutton {
 	border-style: solid;
@@ -2787,4 +2788,7 @@ h5 {
 	border-style: solid;
 	color: #5B5B5B;
 	overflow: hidden;
+}
+h5 {
+	margin-top: 10px;
 }
