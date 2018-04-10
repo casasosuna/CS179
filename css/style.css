@@ -2781,3 +2781,10 @@ h5 {
 	font-style: italic;
 	margin-top: 20px;
 }
+.messagebox{
+	margin:	initial;
+	width: 50%;
+	border-style: solid;
+	color: #5B5B5B;
+	overflow: hidden;
+}
