@@ -30,6 +30,12 @@
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
 	});
+
+	myStorage = window.localStorage;
+	localStorage.setItem('myCat', 'Tom');
+	var cat = localStorage.getItem("myCat");
+	console.log(cat);
+
 </script>
 </head>
 <body class="bg">
@@ -216,6 +222,85 @@
 			<div class="clearfix"> </div>
 		</div>
 	</div>
+
+
+
+<!-- new form -->
+
+    <form>
+      <fieldset>
+        <legend>Survey</legend>
+			<div id="boxalign">
+				<p>
+					<label>Hospital:</label>
+					<input type="text" />
+				</p>
+				<p>
+					<label>Name:</label> <input type="text"/>
+				</p>
+				<p>
+					<label>Title:</label><input type="text"/>
+				</p>
+				<p>
+					<label>Department:</label> <input type="text"/>
+				</p>
+			</div>
+		
+			<div id="boxalign2">
+				<p>
+                    Contact Info<br/>
+				  <label>Email:</label> <input type="text"/>
+				  <label>Office #:</label> <input type="text"/>
+				  <label>Other:</label> <input type="text"/>
+				  
+				  <label>Preferred Contact:</label>
+					<select id = "myList">
+						<option value = "1">Email</option>
+						<option value = "2">Phone</option>
+					</select>
+				</p>
+				
+				<p>
+                    Assistants Contact Info (if applicable)<br/>
+					<label>Name:</label> <input type="text"/>
+					<label>Email:</label> <input type="text"/>
+					<label>Office #:</label> <input type="text"/>
+				</p>
+        
+				<p>
+                    Who do you report to?<br/>
+					<label>Name:</label> <input type="text"/>
+					<label>Title:</label> <input type="text"/>
+				</p>
+				
+				<p>
+                    Who reports to you?<br/>
+					<label>Name:</label> <input type="text"/>
+					<label>Title:</label> <input type="text"/>
+					<label>Department:</label> <input type="text"/>
+				</p>
+			</div>	
+					
+       <p>
+           Top 3 Job Responsibilities<br/>
+			<textarea rows= "3" cols = "80"></textarea>
+       </p>
+	   
+	   <p>
+           List Top 3 Pains, Challenges or Opportunites in your role (department specific or hospital wide):<br/>
+            <textarea rows= "3" cols = "80"></textarea>
+       </p>
+		
+		<label for="serveri"> Server: </label> <input type='text' name="nope" id="second"/> 
+		<button onclick="store()" type="button" value="wow" id="wow">Save</button>
+		
+		<label for="serveri"> Server: </label> <input type='text' name="server" id="saveServer"/> 
+		<button onclick="store()" type="button" value="Save" id="Save">Save</button>
+      </fieldset>
+    </form>
+
+
+	
 <!-- //services -->
 <!-- services-bottom -->
 	
@@ -230,15 +315,29 @@
 			</div>
 		</div>
 	</div>
+
+
 <!-- //footer -->
 <!-- nav -->
 <script>
+
  $(window).load(function() {
    $(".btn-nav").on("click tap", function() {
      $(".nav-container").toggleClass("showNav hideNav").removeClass("hidden");
      $(this).toggleClass("animated");
    });
  });
+
+
+ var save_button = document.getElementById('Save')
+	save_button.onclick = saveData;
+
+	function saveData(){
+  		var input = document.getElementById("saveServer");
+  		localStorage.setItem("server", input.value);
+  		var storedValue = localStorage.getItem("server");
+  		console.log(storedValue);
+  	}
 </script>
 <!-- //nav -->
 </body>
