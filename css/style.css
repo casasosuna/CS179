@@ -1327,6 +1327,7 @@ a.w3_g_plus:hover{
 	color:#999;
 }
 .wthree_services_grid:nth-child(3){
+	margin-top: 20px;
 	margin:2em 0 0;
 }
 .services-bottom h3{
@@ -2795,4 +2796,11 @@ h5 {
 }
 h5 {
 	margin-top: 10px;
+}
+
+.homephoto{
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
