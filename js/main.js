@@ -6,29 +6,14 @@ $("#save").click(function () {
     var i = parseInt(localStorage.getItem(counter_key)) || 1;
     localStorage.setItem(counter_key, i + 1)
     var key = prefix + i;
-    var value = $("#value").attr('value');
+    var value = $("#value").val();
+    console.log($("#value").val());
     localStorage.setItem(key, value);     
     
     RewriteFromStorage();
 });
 
 function RewriteFromStorage() {
-
-    // Get the location of the user.
-    /*navigator.geolocation.getCurrentPosition(function(position) {
-        var latitude = position.coords.latitude;
-        var lat = encodeURIComponent(JSON.stringify(latitude));
-        var longitude = position.coords.longitude;
-        var lon = encodeURIComponent(JSON.stringify(longitude));
-
-        // Add the latitute and longitude of user's location as parameters to the API call
-        fetch('http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=2dde9b32cc829cb83fda0e2074d14a06')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(myJson) {
-          var weather = myJson.weather[0].main;
-          var description = myJson.weather[0].description; */
 
             $("#data").empty();
             for(var i = 0; i < localStorage.length; i++)    
@@ -51,13 +36,9 @@ function RewriteFromStorage() {
                             .click(function() {     
                                 localStorage.removeItem($(this).attr('key'));
                                 RewriteFromStorage();
-                            }))
-                    
+                            }))    
                 }
             }
-        //});
-    //});
-    
 }
 
 RewriteFromStorage();
@@ -76,22 +57,6 @@ $("#save_1").click(function () {
 });
 
 function RewriteFromStorage_1() {
-
-    // Get the location of the user.
-    /*navigator.geolocation.getCurrentPosition(function(position) {
-        var latitude = position.coords.latitude;
-        var lat = encodeURIComponent(JSON.stringify(latitude));
-        var longitude = position.coords.longitude;
-        var lon = encodeURIComponent(JSON.stringify(longitude));
-
-        // Add the latitute and longitude of user's location as parameters to the API call
-        fetch('http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=2dde9b32cc829cb83fda0e2074d14a06')
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(myJson) {
-          var weather = myJson.weather[0].main;
-          var description = myJson.weather[0].description; */
 
             $("#data_1").empty();
             for(var i = 0; i < localStorage.length; i++)    
@@ -118,13 +83,9 @@ function RewriteFromStorage_1() {
                             .click(function() {     
                                 localStorage.removeItem($(this).attr('key'));
                                 RewriteFromStorage_1();
-                            }))
-                    
+                            }))     
                 }
-            }
-        //});
-    //});
-    
+            }  
 }
 
 RewriteFromStorage_1();

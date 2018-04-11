@@ -32,7 +32,7 @@
 	});
 </script>
 </head>
-<body class="bg">
+<body class="bg" id="main">
 <!-- menu -->
 	<button class="btn-nav w3layouts_btn">
 		<span class="bar arrow-top-r"></span>
@@ -178,7 +178,12 @@
 				<p>
 					Name of group:
 				</p> 
-				<input type="text" name="group"><br>
+				
+
+				<div id="data"></div>
+				<span>Enter your note's message</span><input type="text" id="value"/>
+				<input type="button" id="save" value="Save"/>
+
 
 				<!-- create days to meet drop down and hours to meet drop down -->
 			</div>
@@ -216,6 +221,7 @@
 			<div class="clearfix"> </div>
 		</div>
 	</div>
+
 <!-- //services -->
 <!-- services-bottom -->
 	
@@ -230,9 +236,12 @@
 			</div>
 		</div>
 	</div>
+
+
 <!-- //footer -->
 <!-- nav -->
 <script>
+
  $(window).load(function() {
    $(".btn-nav").on("click tap", function() {
      $(".nav-container").toggleClass("showNav hideNav").removeClass("hidden");
@@ -241,5 +250,6 @@
  });
 </script>
 <!-- //nav -->
+<script src="js/main.js"></script>
 </body>
 </html>
