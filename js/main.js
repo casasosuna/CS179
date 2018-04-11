@@ -22,6 +22,12 @@ $("#save").click(function () {
 
 $("#hey").click(function() {
     console.log($("#message").val());
+    var i = parseInt(localStorage.getItem(counter_key)) || 1;
+    localStorage.setItem(counter_key, i + 1)
+    var key = prefix + i;
+    var value = $("#message").val();
+    console.log("The (key, value) for this is (" + key + ", " + value + ")");
+    localStorage.setItem(key, value);
 });
 
 //console.log($("#check").text()); 
