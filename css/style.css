@@ -317,8 +317,7 @@ to { left: -100%; }
     padding:1em 3em;
 }
 .agileinfo_menu_left{
-	float:left;
-	margin-left:11em;
+	margin:auto;
 }
 .agileinfo_menu_left h1 a{
 	font-size:1em;
@@ -327,6 +326,7 @@ to { left: -100%; }
     line-height: 1;
 	font-family: 'Courgette'
 }
+
 .agileinfo_menu_left h1 a span {
     font-size:0.43em;
     display: block;
@@ -336,8 +336,11 @@ to { left: -100%; }
     font-style: normal;
 }
 .agileinfo_menu_right{
-	float:right;
-	position:relative;
+	float: left;
+	position:absolute;
+	left: 100em;
+	bottom: 1.5em;
+	border-color: #24AB00;
 	margin: .2em 0 0;
 }
 .agileinfo_menu_right ul li{
@@ -2826,4 +2829,8 @@ body, html {
 	position: relative;
 	
 	margin-bottom: 30px;
+}
+.clickable{
+	color: blue;
+	font-size: 20px;
 }
