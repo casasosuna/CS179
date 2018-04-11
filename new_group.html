@@ -38,7 +38,7 @@
 
 </script>
 </head>
-<body class="bg">
+<body class="bg" id="main">
 <!-- menu -->
 	<button class="btn-nav w3layouts_btn">
 		<span class="bar arrow-top-r"></span>
@@ -184,12 +184,16 @@
 				<p>
 					Name of group:
 				</p> 
-				<input type="text" name="group" id="groupnamebox"><br>
+
+				<div id="data"></div>
+				<span>Enter your note's message</span><input type="text" id="value"/>
+				<input type="button" id="save" value="Save"/>
+
 
 				<!-- create days to meet drop down and hours to meet drop down -->
 				<p>Availability</p>
 					<label class="container">Monday
-						<input type="checkbox">
+						<input type="checkbox" id="check">
 						<span class="checkmark"></span>
 					  </label>
 					  
@@ -225,16 +229,16 @@
 			</div>
 			<div class="col-xs-4 wthree_services_left">
 				<p>Activity</p>
-					<select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
-						<option value="null">Dance</option>  
-						<option value="null">Acting</option>   
-						<option value="null">Music</option>   
-						<option value="null">Sports</option>   
-						<option value="null">Exercise</option>   
-						<option value="null">Video Games</option>
-						<option value="null">Wine Tasting</option>
-						<option value="null">Eduacation</option>
-						<option value="null">Other</option>   						
+					<select id="w3_country1" class="frm-field required" name="dropdown">
+						<option value="Dance">Dance</option>  
+						<option value="Acting">Acting</option>   
+						<option value="Music">Music</option>   
+						<option value="Sports">Sports</option>   
+						<option value="Exercise">Exercise</option>   
+						<option value="Video Games">Video Games</option>
+						<option value="Wine Tasting">Wine Tasting</option>
+						<option value="Education">Education</option>
+						<option value="Other">Other</option>   						
 					</select>
 				<h4>Pick an activity</h4>
 				<p>Pick something you would want to do with a group of old or new friends. 
@@ -245,97 +249,18 @@
 				<p>
 				Group Description
 				</p>
-				<textarea rows="9" cols="50">
-
-				</textarea>
+				<textarea name="" id="message" rows="9" cols="50" id="mybox"></textarea>
+				<input type="button" id="hey" value="Save"/>
 				<p>
 					Use this space to highlight what you want out of the group and what makes this group special.
 					How would you like these interactions to work? What are you hoping for (eg. learning more about your passion, practice, people to partipcate with)?
 				</p>
-			</div>
-			
+			</div>			
 			<div class="clearfix"> </div>
 		</div>
 	</div>
 
 
-
-<!-- new form -->
-
-    <form>
-      <fieldset>
-        <legend>Survey</legend>
-			<div id="boxalign">
-				<p>
-					<label>Hospital:</label>
-					<input type="text" />
-				</p>
-				<p>
-					<label>Name:</label> <input type="text"/>
-				</p>
-				<p>
-					<label>Title:</label><input type="text"/>
-				</p>
-				<p>
-					<label>Department:</label> <input type="text"/>
-				</p>
-			</div>
-		
-			<div id="boxalign2">
-				<p>
-                    Contact Info<br/>
-				  <label>Email:</label> <input type="text"/>
-				  <label>Office #:</label> <input type="text"/>
-				  <label>Other:</label> <input type="text"/>
-				  
-				  <label>Preferred Contact:</label>
-					<select id = "myList">
-						<option value = "1">Email</option>
-						<option value = "2">Phone</option>
-					</select>
-				</p>
-				
-				<p>
-                    Assistants Contact Info (if applicable)<br/>
-					<label>Name:</label> <input type="text"/>
-					<label>Email:</label> <input type="text"/>
-					<label>Office #:</label> <input type="text"/>
-				</p>
-        
-				<p>
-                    Who do you report to?<br/>
-					<label>Name:</label> <input type="text"/>
-					<label>Title:</label> <input type="text"/>
-				</p>
-				
-				<p>
-                    Who reports to you?<br/>
-					<label>Name:</label> <input type="text"/>
-					<label>Title:</label> <input type="text"/>
-					<label>Department:</label> <input type="text"/>
-				</p>
-			</div>	
-					
-       <p>
-           Top 3 Job Responsibilities<br/>
-			<textarea rows= "3" cols = "80"></textarea>
-       </p>
-	   
-	   <p>
-           List Top 3 Pains, Challenges or Opportunites in your role (department specific or hospital wide):<br/>
-            <textarea rows= "3" cols = "80"></textarea>
-       </p>
-		
-		<label for="serveri"> Server: </label> <input type='text' name="nope" id="second"/> 
-		<button onclick="store()" type="button" value="wow" id="wow">Save</button>
-		
-		<label for="serveri"> Server: </label> <input type='text' name="server" id="saveServer"/> 
-		<button onclick="store()" type="button" value="Save" id="Save">Save</button>
-      </fieldset>
-    </form>
-
-
-	
 <!-- //services -->
 <!-- services-bottom -->
 	
@@ -363,17 +288,8 @@
    });
  });
 
-
- var save_button = document.getElementById('Save')
-	save_button.onclick = saveData;
-
-	function saveData(){
-  		var input = document.getElementById("saveServer");
-  		localStorage.setItem("server", input.value);
-  		var storedValue = localStorage.getItem("server");
-  		console.log(storedValue);
-  	}
 </script>
 <!-- //nav -->
+<script src="js/main.js"></script>
 </body>
 </html>
