@@ -30,6 +30,12 @@
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
 	});
+
+	myStorage = window.localStorage;
+	localStorage.setItem('myCat', 'Tom');
+	var cat = localStorage.getItem("myCat");
+	console.log(cat);
+
 </script>
 </head>
 <body class="bg" id="main">
@@ -178,7 +184,6 @@
 				<p>
 					Name of group:
 				</p> 
-				
 
 				<div id="data"></div>
 				<span>Enter your note's message</span><input type="text" id="value"/>
@@ -186,6 +191,41 @@
 
 
 				<!-- create days to meet drop down and hours to meet drop down -->
+				<p>Availability</p>
+					<label class="container">Monday
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					  </label>
+					  
+					  <label class="container">Tuesday
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					  </label>
+					  
+					  <label class="container">Wednesday
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					  </label>
+					  
+					  <label class="container">Thursday
+						<input type="checkbox">
+						<span class="checkmark"></span>
+					  </label>
+
+						<label class="container">Friday
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						  
+						  <label class="container">Saturday
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						  </label>
+						  
+						  <label class="container">Sunday
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						  </label>
 			</div>
 			<div class="col-xs-4 wthree_services_left">
 				<p>Activity</p>
@@ -222,6 +262,7 @@
 		</div>
 	</div>
 
+
 <!-- //services -->
 <!-- services-bottom -->
 	
@@ -248,6 +289,17 @@
      $(this).toggleClass("animated");
    });
  });
+
+
+ var save_button = document.getElementById('Save')
+	save_button.onclick = saveData;
+
+	function saveData(){
+  		var input = document.getElementById("saveServer");
+  		localStorage.setItem("server", input.value);
+  		var storedValue = localStorage.getItem("server");
+  		console.log(storedValue);
+  	}
 </script>
 <!-- //nav -->
 <script src="js/main.js"></script>
