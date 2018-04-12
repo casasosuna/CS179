@@ -4,7 +4,7 @@
 var prefix = "localStorageDemo-note-";
 var keyValueHolder = {};
 var counter_key = "localStorageDemo-counter";
-$("#save").click(function () { 
+$("#build").click(function () { 
     var i = parseInt(localStorage.getItem(counter_key)) || 1;
     localStorage.setItem(counter_key, i + 1)
     var key = prefix + i;
@@ -34,7 +34,7 @@ console.log(keyValueHolder);
 //})
 
 // Saving group description
-$("#hey").click(function() {
+$("#build").click(function() {
     console.log($("#message").val());
     var i = parseInt(localStorage.getItem(counter_key)) || 1;
     localStorage.setItem(counter_key, i + 1)
@@ -48,12 +48,12 @@ $("#hey").click(function() {
 
 
 // Saving dropdown menu
-$('select[name="dropdown"]').change(function() {
+$("#build").click(function() {
     $(this).val();
     var i = parseInt(localStorage.getItem(counter_key)) || 1;
     localStorage.setItem(counter_key, i + 1)
     var key = prefix + i;
-    var value = $(this).val();
+    var value = $("#w3_country1").val();
     //console.log($(this).val());
     console.log("The (key, value) for this is (" + key + ", " + value + ")");
     localStorage.setItem(key, value);
