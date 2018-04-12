@@ -1,6 +1,8 @@
 // Prefix for keys to reduce the risk of collisions
 
+// Saving name of group
 var prefix = "localStorageDemo-note-";
+var keyValueHolder = {};
 var counter_key = "localStorageDemo-counter";
 $("#save").click(function () { 
     var i = parseInt(localStorage.getItem(counter_key)) || 1;
@@ -9,17 +11,29 @@ $("#save").click(function () {
     var value = $("#value").val();
     console.log("The (key, value) for this is (" + key + ", " + value + ")");
     //console.log($("#value").val());
-    localStorage.setItem(key, value);     
+    localStorage.setItem(key, value);
+
+    var getProperty = function (propertyName, propertyValue) {
+        console.log("in");
+        console.log(typeof propertyName);
+        keyValueHolder[propertyName] = propertyValue;
+    };
+    getProperty(key, value); 
+
     
-    RewriteFromStorage();
+
+    //RewriteFromStorage();
 });
 
+console.log(keyValueHolder);
+//localStorage.clear();
 
 
 //$('select').on('change', function() {
   //alert( this.value );
 //})
 
+// Saving group description
 $("#hey").click(function() {
     console.log($("#message").val());
     var i = parseInt(localStorage.getItem(counter_key)) || 1;
@@ -33,7 +47,7 @@ $("#hey").click(function() {
 //console.log($("#check").text()); 
 
 
-
+// Saving dropdown menu
 $('select[name="dropdown"]').change(function() {
     $(this).val();
     var i = parseInt(localStorage.getItem(counter_key)) || 1;
@@ -65,19 +79,19 @@ function RewriteFromStorage() {
                     var value = localStorage.getItem(key);
                     console.log(value);     
                     var shortkey = key.replace(prefix, "");
-                    $("#data").append(
+                    /*$("#data").append(
                         $("<div class=" + "kvp" + shortkey + ">").html(value)
                             .css('background', 'black')
                             .css('color', 'red')
                             .css('width', '100px')
-                            .css('height', '100px'));
-                    $("#data").append(
+                            .css('height', '100px')); */
+                    /*$("#data").append(
                         $("<input type='button' value='Delete'>")
                             .attr('key', key)
                             .click(function() {     
                                 localStorage.removeItem($(this).attr('key'));
                                 RewriteFromStorage();
-                            }))    
+                            })) */    
                 }
             }
 }
