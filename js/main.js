@@ -4,29 +4,46 @@
 var prefix = "localStorageDemo-note-";
 var keyValueHolder = {};
 var counter_key = "localStorageDemo-counter";
+var arrayHolder = [];
 $("#build").click(function () { 
     var i = parseInt(localStorage.getItem(counter_key)) || 1;
     localStorage.setItem(counter_key, i + 1)
     var key = prefix + i;
     var value = $("#value").val();
+    var value1 = $("#message").val();
+    var value2 = $("#w3_country1").val();
     console.log("The (key, value) for this is (" + key + ", " + value + ")");
     //console.log($("#value").val());
     localStorage.setItem(key, value);
+    console.log(value);
+    console.log(value1);
+    console.log(value2);
 
     var getProperty = function (propertyName, propertyValue) {
-        console.log("in");
-        console.log(typeof propertyName);
+        //console.log("in");
+        //console.log(typeof propertyName);
         keyValueHolder[propertyName] = propertyValue;
     };
-    getProperty(key, value); 
+    getProperty(key, value);
+
+    localStorage.setItem("groupName", value);
+    localStorage.setItem("groupDescription", value1);
+    localStorage.setItem("groupActivity", value2);
+    //arrayHolder[0] = value;
+    //arrayHolder[1] = value1;
+    //arrayHolder[2] = value2;
+    //console.log(arrayHolder); 
+    //localStorage.setItem("arrayStorage", arrayHolder);
 
     
 
     //RewriteFromStorage();
 });
 
-console.log(keyValueHolder);
+
 //localStorage.clear();
+
+
 
 
 //$('select').on('change', function() {
@@ -35,12 +52,12 @@ console.log(keyValueHolder);
 
 // Saving group description
 $("#build").click(function() {
-    console.log($("#message").val());
+    //console.log($("#message").val());
     var i = parseInt(localStorage.getItem(counter_key)) || 1;
     localStorage.setItem(counter_key, i + 1)
     var key = prefix + i;
-    var value = $("#message").val();
-    console.log("The (key, value) for this is (" + key + ", " + value + ")");
+    //var value = $("#message").val();
+    //console.log("The (key, value) for this is (" + key + ", " + value + ")");
     localStorage.setItem(key, value);
 });
 
@@ -53,9 +70,9 @@ $("#build").click(function() {
     var i = parseInt(localStorage.getItem(counter_key)) || 1;
     localStorage.setItem(counter_key, i + 1)
     var key = prefix + i;
-    var value = $("#w3_country1").val();
+    //var value = $("#w3_country1").val();
     //console.log($(this).val());
-    console.log("The (key, value) for this is (" + key + ", " + value + ")");
+    //console.log("The (key, value) for this is (" + key + ", " + value + ")");
     localStorage.setItem(key, value);
 });
 
@@ -77,7 +94,7 @@ function RewriteFromStorage() {
                 // Test to see if key starts with our prefix
                 if(key.indexOf(prefix) == 0) {
                     var value = localStorage.getItem(key);
-                    console.log(value);     
+                    //console.log(value);     
                     var shortkey = key.replace(prefix, "");
                     /*$("#data").append(
                         $("<div class=" + "kvp" + shortkey + ">").html(value)

@@ -1,10 +1,24 @@
-var getGroupName = localStorage.getItem("localStorageDemo-note-8");
+//var getGroupName = localStorage.getItem("localStorageDemo-note-8");
+//console.log(getGroupName);
+
+//var getGroupDescription = localStorage.getItem("localStorageDemo-note-9");
+//console.log(getGroupDescription);
+
+//var getGroupActivity = localStorage.getItem("localStorageDemo-note-10");
+//console.log(getGroupActivity);
+
+//var arrayLocalStorage = localStorage.getItem("arrayStorage");
+//console.log(arrayLocalStorage);
+//var storedNames = JSON.parse(localStorage.getItem("arrayStorage"));
+//console.log(storedNames);
+
+var getGroupName = localStorage.getItem("groupName");
 console.log(getGroupName);
 
-var getGroupDescription = localStorage.getItem("localStorageDemo-note-9");
+var getGroupDescription = localStorage.getItem("groupDescription");
 console.log(getGroupDescription);
 
-var getGroupActivity = localStorage.getItem("localStorageDemo-note-10");
+var getGroupActivity = localStorage.getItem("groupActivity");
 console.log(getGroupActivity);
 
 $('#resource_post').click(function() {
