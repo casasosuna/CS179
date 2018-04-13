@@ -36,6 +36,11 @@
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
 	});
+
+	function showInput() {
+        document.getElementById('display').innerHTML = 
+                    document.getElementById("user_input").value;
+    }
 </script>
 </head>
 <body class="bg">
@@ -177,9 +182,9 @@
 <!-- body of the page -->
 
 <!-- group name -->
-<h1>
-	Dynamically Generate the Group Name Clicked On
-</h1> 
+<div id="dynamic"></div>
+<div id="group_description"></div>
+<div id="activity_description"></div>
 <!-- group name -->
 <!-- create a three column layout (resources, write a post/timeline, ) -->
 	<div class="row">
@@ -200,22 +205,27 @@
 			</div>
 		</div>
 
+		<div id="post_resource" style="display: none;">This is the resource</div>
+
 		<!-- create post section -->
 		<div class="middlecolumn column">
 			<!-- create a box for posting -->
 			<div id="status" class="boxed">
-				Write a post to your group...
-				<button id="status_post" class="postbutton">
-					Post
-				</button>
+				<form>
+    <label><b>Write a post to your group</b></label>
+    <input type="text" name="message" id="user_input">
+  </form>
+
+  <input type="submit" onclick="showInput();"><br/>
+				
 			</div>
 
 			<!-- create dummy entry posts -->
 			<h6>
-				Krystal Phu
+				Enrique
 			</h6>	
 				<p>
-					Has anyone planned anything for this weekend?
+					<p><span id='display'></span></p>
 				</p>
 				<hr>
 				<h6>
@@ -253,6 +263,8 @@
 		</div>
 	</div>
 
+	
+
 <!-- //create a three column layout (resources, write a post/timeline, ) -->
 <!-- //body of the page -->
 <!-- banner -->
@@ -278,5 +290,6 @@
  });
 </script>
 <!-- //nav -->
+<script src="js/storageHandlerInGroup.js"></script>
 </body>
 </html>

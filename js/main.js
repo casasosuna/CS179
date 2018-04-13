@@ -1,18 +1,48 @@
 // Prefix for keys to reduce the risk of collisions
 
+// Saving name of group
 var prefix = "localStorageDemo-note-";
+var keyValueHolder = {};
 var counter_key = "localStorageDemo-counter";
-$("#save").click(function () { 
+var arrayHolder = [];
+$("#build").click(function () { 
     var i = parseInt(localStorage.getItem(counter_key)) || 1;
     localStorage.setItem(counter_key, i + 1)
     var key = prefix + i;
     var value = $("#value").val();
+    var value1 = $("#message").val();
+    var value2 = $("#w3_country1").val();
     console.log("The (key, value) for this is (" + key + ", " + value + ")");
     //console.log($("#value").val());
-    localStorage.setItem(key, value);     
+    localStorage.setItem(key, value);
+    console.log(value);
+    console.log(value1);
+    console.log(value2);
+
+    var getProperty = function (propertyName, propertyValue) {
+        //console.log("in");
+        //console.log(typeof propertyName);
+        keyValueHolder[propertyName] = propertyValue;
+    };
+    getProperty(key, value);
+
+    localStorage.setItem("groupName", value);
+    localStorage.setItem("groupDescription", value1);
+    localStorage.setItem("groupActivity", value2);
+    //arrayHolder[0] = value;
+    //arrayHolder[1] = value1;
+    //arrayHolder[2] = value2;
+    //console.log(arrayHolder); 
+    //localStorage.setItem("arrayStorage", arrayHolder);
+
     
-    RewriteFromStorage();
+
+    //RewriteFromStorage();
 });
+
+
+//localStorage.clear();
+
 
 
 
@@ -20,28 +50,29 @@ $("#save").click(function () {
   //alert( this.value );
 //})
 
-$("#hey").click(function() {
-    console.log($("#message").val());
+// Saving group description
+$("#build").click(function() {
+    //console.log($("#message").val());
     var i = parseInt(localStorage.getItem(counter_key)) || 1;
     localStorage.setItem(counter_key, i + 1)
     var key = prefix + i;
-    var value = $("#message").val();
-    console.log("The (key, value) for this is (" + key + ", " + value + ")");
+    //var value = $("#message").val();
+    //console.log("The (key, value) for this is (" + key + ", " + value + ")");
     localStorage.setItem(key, value);
 });
 
 //console.log($("#check").text()); 
 
 
-
-$('select[name="dropdown"]').change(function() {
+// Saving dropdown menu
+$("#build").click(function() {
     $(this).val();
     var i = parseInt(localStorage.getItem(counter_key)) || 1;
     localStorage.setItem(counter_key, i + 1)
     var key = prefix + i;
-    var value = $(this).val();
+    //var value = $("#w3_country1").val();
     //console.log($(this).val());
-    console.log("The (key, value) for this is (" + key + ", " + value + ")");
+    //console.log("The (key, value) for this is (" + key + ", " + value + ")");
     localStorage.setItem(key, value);
 });
 
@@ -63,21 +94,21 @@ function RewriteFromStorage() {
                 // Test to see if key starts with our prefix
                 if(key.indexOf(prefix) == 0) {
                     var value = localStorage.getItem(key);
-                    console.log(value);     
+                    //console.log(value);     
                     var shortkey = key.replace(prefix, "");
-                    $("#data").append(
+                    /*$("#data").append(
                         $("<div class=" + "kvp" + shortkey + ">").html(value)
                             .css('background', 'black')
                             .css('color', 'red')
                             .css('width', '100px')
-                            .css('height', '100px'));
-                    $("#data").append(
+                            .css('height', '100px')); */
+                    /*$("#data").append(
                         $("<input type='button' value='Delete'>")
                             .attr('key', key)
                             .click(function() {     
                                 localStorage.removeItem($(this).attr('key'));
                                 RewriteFromStorage();
-                            }))    
+                            })) */    
                 }
             }
 }
