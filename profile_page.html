@@ -3,27 +3,22 @@
 <head>
 <title>Hobby Match</title> 
 <!-- For-Mobile-Apps-and-Meta-Tags -->
-
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Matchmaking Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, SmartPhone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //For-Mobile-Apps-and-Meta-Tags -->
-
 <!-- Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all"> 
 <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
 <!-- //Custom Theme files -->
-
 <!-- font-awesome icons -->
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
 <!-- //font-awesome icons -->
-
 <!-- js -->
 <script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
 <!-- //js -->
-
 <!-- web-fonts -->  
 <link href='//fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
@@ -35,12 +30,6 @@
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
 	});
-
-	function showInput() {
-        document.getElementById('display').innerHTML = 
-                    document.getElementById("user_input").value;
-	}
-	
 </script>
 </head>
 <body class="bg">
@@ -52,10 +41,12 @@
 	</button>
 	<nav class="nav-container hidden hideNav w3_nav">
 	  <ul class="nav-list">
-		<li class="list-item"><a href="index.html"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="new_group.html"><i class="glyphicon glyphicon-plus" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="search.html"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="group_list.html"><i class="glyphicon glyphicon-list" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="main.html"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="about.html"><i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i></a></li>
+		<li class="list-item active"><a href="services.html"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="short-codes.html"><i class="glyphicon glyphicon-text-size" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="gallery.html"><i class="glyphicon glyphicon-picture" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="contact.html"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></a></li>
 	  </ul>
 	</nav>
 	<div id="ban" class="agileinfo_menu w3l_menu">
@@ -74,8 +65,7 @@
 		<div class="clearfix"> </div>
 	</div>
 <!-- //menu -->
-
-<!-- pop-up-box for signin and signup-->
+<!-- pop-up-box -->
 	<div id="small-dialog" class="mfp-hide w3ls_small_dialog">
 		<h2>Sign In</h2>		
 		<div class="modal-body agileits_modal_body">
@@ -177,97 +167,16 @@
 					});
 				</script>
 <!--//pop-up-box -->
-<!-- body of the page -->
-
-<!-- group name -->
-<div id="dynamic"></div>
-<div id="group_description"></div>
-<div id="activity_description"></div>
-<!-- group name -->
-<!-- create a three column layout (resources, write a post/timeline, ) -->
-	<div class="row">
-
-		<!-- create left column for resources section -->
-		<div class="leftcolumn column">
-			<h5>
-				Resources...
-			</h5>
-			<div id="resources" class="boxed">
-				Share a resource with your group...
-				<button id-"resource_attach" class="attachbutton">
-					Attach
-				</button>
-				<button id="resource_post" class="postbutton">
-					Post
-				</button>
-			</div>
-		</div>
-
-		<div id="post_resource" style="display: none;">This is the resource</div>
-
-		<!-- create post section -->
-		<div class="middlecolumn column">
-			<!-- create a box for posting -->
-			<div id="status" class="boxed">
-				<form>
-    <label><b>Write a post to your group</b></label>
-    <input type="text" name="message" id="user_input">
-  </form>
-
-  <input type="submit" onclick="showInput();"><br/>
-				
-			</div>
-
-			<!-- create dummy entry posts -->
-			<h6>
-				Enrique
-			</h6>	
-				<p>
-					<p><span id='display'></span></p>
-				</p>
-				<hr>
-				<h6>
-					Chandler Brown
-				</h6>	
-					<p>
-						Hi everyone! I just wanted to share information about this gaming convention happening within Boston this weekend. The event is free and seems like fun.
-					</p>
-				<hr>
-			<!-- //create a box for posting -->
-		
-		</div>
-		<!-- create a messaging section -->
-		<div class="rightcolumn column">
-			<h5>
-				Messaging...
-			</h5>
-
-			<!-- example messages -->
-				<div id="message1" class="messagebox">
-					Calvin Stewart
-				</div>
-				<div id="message2" class="messagebox">
-					Chandler Brown
-				</div>
-				<div id="message3" class="messagebox">
-					Nik Bostrom
-				</div>
-				<div id="message4" class="messagebox">
-					Krystal Phu
-				</div>
-				<div id="message5" class="messagebox">
-					Jackie Chea
-				</div>
-		</div>
-	</div>
-
-	
-
-<!-- //create a three column layout (resources, write a post/timeline, ) -->
-<!-- //body of the page -->
 <!-- banner -->
 	
-
+<!-- //banner -->
+<!-- services -->
+	
+<!-- //services -->
+<!-- services-bottom -->
+	
+<!-- //services-bottom -->
+<!-- footer -->
 	<div class="footer">
 		
 		<div class="footer-copy">
@@ -288,6 +197,5 @@
  });
 </script>
 <!-- //nav -->
-<script src="js/storageHandlerInGroup.js"></script>
 </body>
 </html>
