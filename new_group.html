@@ -48,11 +48,6 @@
 	<nav class="nav-container hidden hideNav w3_nav">
 	  <ul class="nav-list">
 		<li class="list-item"><a href="index.html"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="about.html"><i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i></a></li>
-		<li class="list-item active"><a href="services.html"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="short-codes.html"><i class="glyphicon glyphicon-text-size" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="gallery.html"><i class="glyphicon glyphicon-picture" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="contact.html"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></a></li>
 	  </ul>
 	</nav>
 	<div id="ban" class="agileinfo_menu w3l_menu">
@@ -177,17 +172,16 @@
 	
 <!-- //banner -->
 <!-- services -->
-	<div class="services">
+	<div class="services" id="creategroupblock">
 		<h3 style="color:#57AF00;">Create a New Group</h3>
 		<div class="wthree_services_grid" style="float: auto; margin-center: 1px;">
 			<div class="col-xs-4 wthree_services_left">
 				<p>
-					Name of group:
+					Name of group
 				</p> 
 
 				<div id="data"></div>
 				<input type="text" id="value"/>
-				<input type="button" id="save" value="Save"/>
 
 
 				<!-- create days to meet drop down and hours to meet drop down -->
@@ -245,17 +239,14 @@
 					Pick something that you would feel comfortable doing with other people. 
 				</p>
 
-				<input type="button" onclick="location.href='inside_group.html'" value="Create" id="build" />
+				<input type="button" onclick="location.href='inside_group.html'" value="Create" id="build" class="btn btn-success"/>
 			</div>
 			<div class="col-xs-4 wthree_services_left">
 				<p>
 				Group Description
 				</p>
 				<textarea name="" id="message" rows="9" cols="50" id="mybox"></textarea>
-				<div>
-				<input type="button" id="hey" value="Save"/>
-				</div>
-				<p>
+				<p id="groupdescription">
 					Use this space to highlight what you want out of the group and what makes this group special.
 					How would you like these interactions to work? What are you hoping for (eg. learning more about your passion, practice, people to partipcate with)?
 				</p>

@@ -2831,9 +2831,19 @@ body, html {
 	margin-bottom: 30px;
 }
 .clickable{
-	color: blue;
+	color: #24AB00;
 	font-size: 20px;
+	text-decoration: underline;
 }
 #availability{
 	margin-top: 20px;
+}
+#groupdescription{
+	margin-bottom: 50px;
+}
+#build{
+	margin-top: 80px;
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 8px;
 }
