@@ -2748,7 +2748,6 @@ nav.w3agile_paging {
 }
 #status {
 	margin-top: 55px;
-	margin-bottom: 10px;
 }
 .attachbutton {
 	border-style: solid;
@@ -2759,6 +2758,7 @@ nav.w3agile_paging {
 	border-style: solid;
 	color: #24AB00;
 	float: right;
+	margin-left: 20ex;
 }
 .column {
     float: left;
@@ -2874,4 +2874,12 @@ body, html {
 	float: center;
 	margin-left: 400px;
 	margin-right: 400px;
+}
+#resource_post, #resource_attach, #status_post{
+	float: right;
+	border-color: #000;
+	border-style: solid;
+}
+.forum_posts{
+	margin-top: 50px;
 }
