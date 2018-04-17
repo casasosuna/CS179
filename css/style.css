@@ -1,3 +1,7 @@
+#middle h1 {
+  color: #228B22;
+}
+
 .row {
     display: flex;
 }

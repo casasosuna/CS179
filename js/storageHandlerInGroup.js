@@ -85,7 +85,7 @@ newDivGroup.appendAfter(document.getElementById('group_description'));
 // create a new div element 
   var newDivActivity = document.createElement("p"); 
   // and give it some content 
-  var newContentActivity = document.createTextNode("Group Activity " + getGroupActivity); 
+  var newContentActivity = document.createTextNode("Group Activity: " + getGroupActivity); 
   // add the text node to the newly created div
   newDivActivity.appendChild(newContentActivity);  
 
