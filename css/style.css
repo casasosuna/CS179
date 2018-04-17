@@ -2831,9 +2831,37 @@ body, html {
 	margin-bottom: 30px;
 }
 .clickable{
-	color: blue;
+	color: #24AB00;
 	font-size: 20px;
+	text-decoration: underline;
 }
 #availability{
 	margin-top: 20px;
+}
+#groupdescription{
+	margin-bottom: 50px;
+}
+#build{
+	margin-top: 80px;
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 8px;
+}
+#grouptitle{
+	color: #00acee;
+}
+#list_title{
+	text-align: center;
+	color: #24AB00;
+	margin-bottom: 30px;
+}
+.listgroupdescript{
+	margin-left: 30px;
+	font-size: 15px;
+	color: #000;
+}
+.list-group-item{
+	font-size: 25px;
+	background-color:#E0E0E0;
+	border-color: #000;
 }
