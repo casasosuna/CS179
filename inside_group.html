@@ -36,11 +36,18 @@
 		});
 	});
 
+	var count = 0;
 	function showInput() {
+		//if (count > 0) {
+			//create a div with count as div's id
+			// document.getElementById(count).innerHTML =
+				// document.getElementById("user_input").value;
+		//}
         document.getElementById('display').innerHTML = 
                     document.getElementById("user_input").value;
-	}
-	
+        //count += 1;
+    }
+
 </script>
 </head>
 <body class="bg">
@@ -181,15 +188,15 @@
 <!-- body of the page -->
 
 <!-- group name -->
-<div id="dynamic"></div>
-<div id="group_description"></div>
-<div id="activity_description"></div>
+
+
+
 <!-- group name -->
 <!-- create a three column layout (resources, write a post/timeline, ) -->
 	<div class="row">
 
 		<!-- create left column for resources section -->
-		<div class="leftcolumn column">
+		<div class="leftcolumn column" id="left">
 			<h5>
 				Resources...
 			</h5>
@@ -202,12 +209,16 @@
 					Post
 				</button>
 			</div>
+			<div id="post_resource" style="display: none;">This is the resource</div>
 		</div>
 
-		<div id="post_resource" style="display: none;">This is the resource</div>
 
 		<!-- create post section -->
-		<div class="middlecolumn column">
+		<div class="middlecolumn column" id="middle">
+			<div id="dynamic"></div>
+			<div id="group_description"></div>
+			<div id="activity_description"></div>
+			
 			<!-- create a box for posting -->
 			<div id="status" class="boxed">
 				<form>
@@ -216,6 +227,7 @@
   </form>
 
   <input type="submit" onclick="showInput();"><br/>
+
 				
 			</div>
 
