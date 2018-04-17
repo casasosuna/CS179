@@ -2865,3 +2865,13 @@ body, html {
 	background-color:#E0E0E0;
 	border-color: #000;
 }
+.static_title{
+	margin-top: 30px;
+	color: #24AB00;
+}
+.group_description{
+	margin-top: 15px;
+	float: center;
+	margin-left: 400px;
+	margin-right: 400px;
+}
