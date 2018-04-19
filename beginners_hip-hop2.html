@@ -3,55 +3,39 @@
 <head>
 <title>Hobby Match</title> 
 <!-- For-Mobile-Apps-and-Meta-Tags -->
+
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Matchmaking Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, SmartPhone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //For-Mobile-Apps-and-Meta-Tags -->
+
 <!-- Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all"> 
 <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
 <!-- //Custom Theme files -->
+
 <!-- font-awesome icons -->
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
 <!-- //font-awesome icons -->
+
 <!-- js -->
 <script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
 <!-- //js -->
+
 <!-- web-fonts -->  
 <link href='//fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 <!-- //web-fonts -->
+
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
 		$(".scroll").click(function(event){		
 			event.preventDefault();
 			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 		});
-
-
-		$("#change").click(function(event){
-			$(".flex-container .column p").css("color", "blue")
-    	});
-
-    	$('.drop').change(function(e){
-      	// this function runs when a user selects an option from a <select> element
-      	window.location.href = $(".drop option:selected").attr('value');
-   		});
-
-    	//$(".button").click(function(event){
-		//if ($(".flex-container .column p").css("color", "blue")) {
-
-		//}
 	});
-
-	//document.getElementById('change').onclick = changeColor;   
-
-    //function changeColor() {
-        //document.body.style.color = "purple";
-        //return false;
-    //}
 </script>
 </head>
 <body class="bg">
@@ -63,11 +47,11 @@
 	</button>
 	<nav class="nav-container hidden hideNav w3_nav">
 	  <ul class="nav-list">
-		<li class="list-item"><a href="index.html"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="new_group.html"><i class="glyphicon glyphicon-plus" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="search.html"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="group_list.html"><i class="glyphicon glyphicon-list" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="profilehome.html"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i></a></li>
+            <li class="list-item"><a href="index.html"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a></li>
+            <li class="list-item"><a href="new_group.html"><i class="glyphicon glyphicon-plus" aria-hidden="true"></i></a></li>
+            <li class="list-item"><a href="search.html"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></a></li>
+            <li class="list-item"><a href="group_list.html"><i class="glyphicon glyphicon-list" aria-hidden="true"></i></a></li>
+            <li class="list-item"><a href="profilehome.html"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i></a></li>
 	  </ul>
 	</nav>
 	<div id="ban" class="agileinfo_menu w3l_menu">
@@ -86,18 +70,19 @@
 		<div class="clearfix"> </div>
 	</div>
 <!-- //menu -->
-<!-- pop-up-box -->
+
+<!-- pop-up-box for signin and signup-->
 	<div id="small-dialog" class="mfp-hide w3ls_small_dialog">
 		<h2>Sign In</h2>		
 		<div class="modal-body agileits_modal_body">
-			 <form action="profile_page.html" method="post">
+			 <form action="#" method="post">
 				<span>
 					<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
-					<input type="email" name="Email" placeholder="Email" required="" value="myemail@college.harvard.edu"/>
+					<input type="email" name="Email" placeholder="Email" required=""/>
 				</span>
 				<span class="w3_modal">
 					<i class="glyphicon glyphicon-lock" aria-hidden="true"></i>
-					<input type="text" name="Password" placeholder="Password" required="" value="*********"/>
+					<input type="text" name="Password" placeholder="Password" required=""/>
 				</span>
 				<div class="agile_remember">
 					<div class="agile_remember_left">
@@ -118,12 +103,12 @@
 	<div id="small-dialog1" class="mfp-hide">
 		<h2>Sign Up</h2>		
 		<div class="modal-body w3_agileits_modal_body">
-			<form action="profile_page.html" method="post">
+			<form action="#" method="post">
 				<div class="w3_modal_body_grid">
 				</div>
 				<div class="w3_modal_body_grid w3_modal_body_grid1">
 					<span>Name</span>
-					<input type="text" name="Name" placeholder=" " required="" value="Enrique"/>
+					<input type="text" name="Name" placeholder=" " required=""/>
 				</div>
 				<div class="w3_modal_body_grid">
 					<span>Gender</span>
@@ -149,11 +134,11 @@
 				</div>
 				<div class="w3_modal_body_grid">
 					<span>Email</span>
-					<input type="email" name="Email" placeholder=" " required="" value="myemail@college.harvard.edu"/>
+					<input type="email" name="Email" placeholder=" " required=""/>
 				</div>
 				<div class="w3_modal_body_grid w3_modal_body_grid1">
 					<span>Password</span>
-					<input type="password" name="Password" placeholder=" " required="" value="*******"/>
+					<input type="password" name="Password" placeholder=" " required=""/>
 				</div>
 				<input type="submit" value="Sign Up">
 			</form>
@@ -188,70 +173,106 @@
 					});
 				</script>
 <!--//pop-up-box -->
-<!-- banner -->
-	
-<!-- //banner -->
-<!-- services -->
-<div class="services">
-<div class="wthree_services_grid" style="float: center; margin-center: 1px;">
-	<h2 id="list_title">All Groups</h2>
+<!-- body of the page -->
+
+<!-- group name -->
+<h1 class="static_title">
+	Beginners Hip-Hop
+</h1> 
+<p class="group_description">
+        Hi, I'm a trained ballet dancer and I want to work on transitioning between dance styles more. I am going to start attending some beginner hip-hop
+        classes in the area to learn form, body positions and textural choices. I am looking for other people to push me through this process and help
+        me learn.
+</p>
+<!-- group name -->
+<!-- create a three column layout (resources, write a post/timeline, ) -->
+	<div class="row">
+
+		<!-- create left column for resources section -->
+		<div class="leftcolumn column">
+			<h5>
+				Resources...
+			</h5>
+			<div id="resources" class="boxed">
+				Share a resource with your group...
+            </div>
+            <input type="button" id="resource_attach" value="Attach" class="btn btn-success"/>
+            <input type="button" id="resource_post" value="Post" class="btn btn-success"/>
+            
+            <div class="static_resources">
+                <hr>
+                <h6>
+                    James Jones
+                </h6>
+                <p>
+                    Would like to contribute to this conversation about what technical skills people have? A lot of people are claiming speed of choreography pick up 
+                    is important and I was wondering if we can finish this conversation.
+                </p>
+
+                <button type="button" class="btn btn-link">https://www.quora.com/What-technical-skills-do-great-hip-hop-dancers-possess</button>
+
+            </div>
+		</div>
+
+		<!-- create post section -->
+		<div class="middlecolumn column">
+			<!-- create a box for posting -->
+			<div id="status" class="boxed">
+				Write a post to your group...
+            </div>
+            <input type="button" id="status_post" value="Post" class="btn btn-success"/>
+
+			<!-- create dummy entry posts -->
+            <div class="forum_posts">
+            <hr>
+            <h6>
+				Krystal Phu
+			</h6>	
+				<p>
+					Has anyone planned anything for this weekend?
+				</p>
+				<hr>
+				<h6>
+					Chandler Brown
+				</h6>	
+					<p>
+						Hi everyone! I just wanted to share information about this gaming convention happening within Boston this weekend. The event is free and seems like fun.
+					</p>
+                <hr>
+            </div>
+			<!-- //create a box for posting -->
 		
-	<hr>
-	<div class="list-group">
-			<a href="anime_cosplay.html" class="list-group-item">Anime Cosplay
-				<p class="listgroupdescript">
-					This group is for people interested in anime who want to begin cosplaying but don't know how to create the costumes, 
-					where to wear them to and don't have people to wear them with. We are working on sharing methods that create the most realistic costumes,
-					learning to build each others confidence and expand our horizons.
-			
-				</p>
-			</a>
-			<a href="spanish_speaking.html" class="list-group-item">Spanish Speaking Practice
-					<p class="listgroupdescript">
-						I've never taken a class to learn Spanish so I don't have a strong understanding of grammar. But I want to learn spansih to help with my job.
-						I don't have people to practice with so I am looking for other people to meet up once a week to just speak in spanish with. I just want to get the practice
-						having real conversations with people.
-					
-					</p>
-			</a>
-			<a href="beginners_hip-hop.html" class="list-group-item">Beginners Hip-Hop
-				<p class="listgroupdescript">
-					I am interested in learning how to be a better dancer. I have never taken classes before and I am not interested in learning more about dance
-					techniques but I would like to just have better dance moves for parties and weddings. Let me know you are also interested in learning some basic moves.
-				
-				</p>
-			</a>
-			<a href="beginners_hip-hop2.html" class="list-group-item">Beginners Hip-Hop
-					<p class="listgroupdescript">
-						Hi, I'm a trained ballet dancer and I want to work on transitioning between dance styles more. I am going to start attending some beginner hip-hop
-						classes in the area to learn form, body positions and textural choices. I am looking for other people to push me through this process and help
-						me learn.
-					
-					</p>
-				</a>
-			
-	</div>
-</div>
+		</div>
+		<!-- create a messaging section -->
+		<div class="rightcolumn column">
+			<h5>
+				Messaging...
+			</h5>
 
-<!-- <a href="inside_group.html" class="button">Join Selected Group</a>
-
-<form name="jump" class="center">
-<select name="menu" class='drop'>
-<option value="#">Select an option</option>
-<option value="inside_group.html">Crazy Dancers (Cumbia Dancing)</option>
-<option value="index.html">Anime Geeks (Discussing Anime)</option>
-<option value="new_group.html">Jam Club (Playing Rock Music)</option> -->
-</select>
-
-
-			<div class="clearfix"> </div>
+			<!-- example messages -->
+				<div id="message1" class="messagebox">
+					Calvin Stewart
+				</div>
+				<div id="message2" class="messagebox">
+					Chandler Brown
+				</div>
+				<div id="message3" class="messagebox">
+					Nik Bostrom
+				</div>
+				<div id="message4" class="messagebox">
+					Krystal Phu
+				</div>
+				<div id="message5" class="messagebox">
+					Jackie Chea
+				</div>
 		</div>
 	</div>
-<!-- //services -->
-<!-- services-bottom -->
+
+<!-- //create a three column layout (resources, write a post/timeline, ) -->
+<!-- //body of the page -->
+<!-- banner -->
 	
-<!-- //services-bottom -->
-<!-- footer -->
+
 	<div class="footer">
 		
 		<div class="footer-copy">
