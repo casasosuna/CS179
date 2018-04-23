@@ -1,3 +1,14 @@
+#middle h1 {
+  color: #228B22;
+  font-weight: bold;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+#middle p {
+  font-weight: bold;
+}
+
 .row {
     display: flex;
 }
