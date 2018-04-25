@@ -1,3 +1,12 @@
+.image {
+  padding-left: 300px;
+}
+
+#section-intro {
+  border-color: #2f6d07;
+  border-width: 50px 15px;
+}
+
 #middle h1 {
   color: #228B22;
   font-weight: bold;
