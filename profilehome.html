@@ -40,35 +40,35 @@
 </head>
 <body class="bg" id="main">
 <!-- menu -->
-    <button class="btn-nav w3layouts_btn">
-        <span class="bar arrow-top-r"></span>
-        <span class="bar arrow-middle-r"></span>
-        <span class="bar arrow-bottom-r"></span>
-    </button>
-    <nav class="nav-container hidden hideNav w3_nav">
-      <ul class="nav-list">
-        <li class="list-item"><a href="index.html"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a></li>
-        <li class="list-item"><a href="new_group.html"><i class="glyphicon glyphicon-plus" aria-hidden="true"></i></a></li>
-        <li class="list-item"><a href="search.html"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></a></li>
-        <li class="list-item"><a href="group_list.html"><i class="glyphicon glyphicon-list" aria-hidden="true"></i></a></li>
-        <li class="list-item"><a href="profilehome.html"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i></a></li>
-      </ul>
-    </nav>
-    <div id="ban" class="agileinfo_menu w3l_menu">
-        <div class="agileinfo_menu_left">
-            <h1 align="center"><a href="index.html">Hobby Match<span>Find a group of friends. Make new experiences </a></h1>
-        </div>
-        <div class="agileinfo_menu_right">
-            <ul>
-                <li><a href="#small-dialog" class="play-icon popup-with-zoom-anim">Sign In</a></li>
-                <li><a href="#small-dialog1" class="play-icon popup-with-zoom-anim">Sign Up</a></li>
-            </ul>
-            <div class="agileinfo_menu_right_pos">
-                <p>Or</p>
-            </div>
-        </div>
-        <div class="clearfix"> </div>
-    </div>
+	<button class="btn-nav w3layouts_btn">
+		<span class="bar arrow-top-r"></span>
+		<span class="bar arrow-middle-r"></span>
+		<span class="bar arrow-bottom-r"></span>
+	</button>
+	<nav class="nav-container hidden hideNav w3_nav">
+	  <ul class="nav-list">
+		<li class="list-item"><a href="index.html"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="new_group.html"><i class="glyphicon glyphicon-plus" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="search.html"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="group_list.html"><i class="glyphicon glyphicon-list" aria-hidden="true"></i></a></li>
+		<li class="list-item"><a href="profilehome.html"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i></a></li>
+	  </ul>
+	</nav>
+	<div id="ban" class="agileinfo_menu w3l_menu">
+		<div class="agileinfo_menu_left">
+			<h1><a href="index.html">Hobby Match<span>Find a group of friends. Make new experiences </a></h1>
+		</div>
+		<div class="agileinfo_menu_right">
+			<ul>
+				<li><a href="#small-dialog" class="play-icon popup-with-zoom-anim">Sign In</a></li>
+				<li><a href="#small-dialog1" class="play-icon popup-with-zoom-anim">Sign Up</a></li>
+			</ul>
+			<div class="agileinfo_menu_right_pos">
+				<p>Or</p>
+			</div>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
 <!-- //menu -->
 <!-- pop-up-box -->
     <div id="small-dialog" class="mfp-hide w3ls_small_dialog">
@@ -172,247 +172,132 @@
                     });
                 </script>
 <!--//pop-up-box -->
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 90%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      .title {
-        font-weight: bold;
-      }
-      #infowindow-content {
-        display: none;
-      }
-      #map #infowindow-content {
-        display: inline;
-      }
-    </style>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>From Info Windows to a Database: Saving User-Added Form Data</title>
+<style>
+  /* Always set the map height explicitly to define the size of the div
+   * element that contains the map. */
+  #map {
+    height: 100%;
+  }
+  /* Optional: Makes the sample page fill the window. */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+</style>
   </head>
   <body>
-    <div id="map"></div>
-    <div id="infowindow-content">
-      <img id="place-icon" src="" height="16" width="16">
-      <span id="place-name"  class="title"></span><br>
-      <span id="place-address"></span><br>
-    Plan Event? Yes | No <span id= "organize-event" </span><br>
-    </div><br>
-
+    <div id="map" height="460px" width="100%"></div>
+    <div id="form">
+      <table>
+      <tr><td>Name:</td> <td><input type='text' id='name'/> </td> </tr>
+      <tr><td>Address:</td> <td><input type='text' id='address'/> </td> </tr>
+      <tr><td>Type:</td> <td><select id='type'> +
+                 <option value='bar' SELECTED>bar</option>
+                 <option value='restaurant'>restaurant</option>
+                 </select> </td></tr>
+                 <tr><td></td><td><input type='button' value='Save' onclick='saveData()'/></td></tr>
+      </table>
+    </div>
+    <div id="message">Location saved</div>
     <script>
-      function initMap() {
-        var origin = {lat: 42.374393, lng: -71.116257};
+      var map;
+      var marker;
+      var infowindow;
+      var messagewindow;
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 18,
-          center: origin
+      function initMap() {
+        var california = {lat: 42.374393, lng: -71.116257};
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: california,
+          zoom: 15
         });
-        var clickHandler = new ClickEventHandler(map, origin);
+
+        var marker0 = new google.maps.Marker({
+          position: {lat: 42.381176, lng: -71.117702},
+          map: map,
+          title: 'Prof.Zara Talk on Chemotherapy'
+        });
+
+        var marker1 = new google.maps.Marker({
+          position: {lat: 42.373902, lng: -71.110200},
+          map: map,
+          title: 'Mike Tony Book show' 
+        });
+
+        var marker2 = new google.maps.Marker({
+          position: {lat: 42.372591, lng: -71.119757},
+          map: map,
+          title: 'Patty Birthday Party event'
+        });
+
+        var marker3 = new google.maps.Marker({
+          position: {lat: 42.373966, lng: -71.120560},
+          map: map,
+          title: 'River House Formal'
+        });
+
+
+        infowindow = new google.maps.InfoWindow({
+          content: document.getElementById('form')
+        });
+
+        messagewindow = new google.maps.InfoWindow({
+          content: document.getElementById('message')
+        });
+
+        google.maps.event.addListener(map, 'click', function(event) {
+          marker = new google.maps.Marker({
+            position: event.latLng,
+            map: map
+          });
+
+
+          google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map, marker);
+          });
+        });
       }
 
-      /**
-       * @constructor
-       */
-      var ClickEventHandler = function(map, origin) {
-        this.origin = origin;
-        this.map = map;
-        this.directionsService = new google.maps.DirectionsService;
-        this.directionsDisplay = new google.maps.DirectionsRenderer;
-        this.directionsDisplay.setMap(map);
-        this.placesService = new google.maps.places.PlacesService(map);
-        this.infowindow = new google.maps.InfoWindow;
-        this.infowindowContent = document.getElementById('infowindow-content');
-        this.infowindow.setContent(this.infowindowContent);
+      function saveData() {
+        var name = escape(document.getElementById('name').value);
+        var address = escape(document.getElementById('address').value);
+        var type = document.getElementById('type').value;
+        var latlng = marker.getPosition();
+        var url = 'phpsqlinfo_addrow.php?name=' + name + '&address=' + address +
+                  '&type=' + type + '&lat=' + latlng.lat() + '&lng=' + latlng.lng();
 
-        // Listen for clicks on the map.
-        this.map.addListener('click', this.handleClick.bind(this));
-      };
+        downloadUrl(url, function(data, responseCode) {
 
-      ClickEventHandler.prototype.handleClick = function(event) {
-        console.log('You clicked on: ' + event.latLng);
-        // If the event has a placeId, use it.
-        if (event.placeId) {
-          console.log('You clicked on place:' + event.placeId);
-
-          // Calling e.stop() on the event prevents the default info window from
-          // showing.
-          // If you call stop here when there is no placeId you will prevent some
-          // other map click event handlers from receiving the event.
-          event.stop();
-          this.calculateAndDisplayRoute(event.placeId);
-          this.getPlaceInformation(event.placeId);
-        }
-      };
-
-      ClickEventHandler.prototype.calculateAndDisplayRoute = function(placeId) {
-        var me = this;
-        this.directionsService.route({
-          origin: this.origin,
-          destination: {placeId: placeId},
-          travelMode: 'WALKING'
-        }, function(response, status) {
-          if (status === 'OK') {
-            me.directionsDisplay.setDirections(response);
-          } else {
-            window.alert('Directions request failed due to ' + status);
+          if (responseCode == 200 && data.length <= 1) {
+            infowindow.close();
+            messagewindow.open(map, marker);
           }
         });
-      };
+      }
 
-      ClickEventHandler.prototype.getPlaceInformation = function(placeId) {
-        var me = this;
-        this.placesService.getDetails({placeId: placeId}, function(place, status) {
-          if (status === 'OK') {
-            me.infowindow.close();
-            me.infowindow.setPosition(place.geometry.location);
-            me.infowindowContent.children['place-icon'].src = place.icon;
-            me.infowindowContent.children['place-name'].textContent = place.name;
-            me.infowindowContent.children['place-address'].textContent =
-            place.formatted_address;
-            /* Link event opening capability to place's website to verify */
-            me.infowindow.open(me.map);
+      function downloadUrl(url, callback) {
+        var request = window.ActiveXObject ?
+            new ActiveXObject('Microsoft.XMLHTTP') :
+            new XMLHttpRequest;
+
+        request.onreadystatechange = function() {
+          if (request.readyState == 4) {
+            request.onreadystatechange = doNothing;
+            callback(request.responseText, request.status);
           }
-        });
-      };
-            // Create the search box and link it to the UI element.
-        var input = document.getElementById('pac-input');
-        var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        };
 
-        // Bias the SearchBox results towards current map's viewport.
-        map.addListener('bounds_changed', function() {
-          searchBox.setBounds(map.getBounds());
-        });
-
-        var markers = [];
-        // Listen for the event fired when the user selects a prediction and retrieve
-        // more details for that place.
-        searchBox.addListener('places_changed', function() {
-          var places = searchBox.getPlaces();
-
-          if (places.length == 0) {
-            return;
-          }
-
-          // Clear out the old markers.
-          markers.forEach(function(marker) {
-            marker.setMap(null);
-          });
-          markers = [];
-
-          // For each place, get the icon, name and location.
-          var bounds = new google.maps.LatLngBounds();
-          places.forEach(function(place) {
-            if (!place.geometry) {
-              console.log("Returned place contains no geometry");
-              return;
-            }
-            var icon = {
-              url: place.icon,
-              size: new google.maps.Size(71, 71),
-              origin: new google.maps.Point(0, 0),
-              anchor: new google.maps.Point(17, 34),
-              scaledSize: new google.maps.Size(25, 25)
-            };
-
-            // Create a marker for each place.
-            markers.push(new google.maps.Marker({
-              map: map,
-              icon: icon,
-              title: place.name,
-              position: place.geometry.location
-            }));
-
-            if (place.geometry.viewport) {
-              // Only geocodes have viewport.
-              bounds.union(place.geometry.viewport);
-            } else {
-              bounds.extend(place.geometry.location);
-            }
-          });
-          map.fitBounds(bounds);
-        });
-
-        google.maps.event.addListener(marker,'click',function() {
-        var infowindow = new google.maps.InfoWindow({
-            content:"Hello World!"
-        });
-    infowindow.open(map,marker);
-    });
-
-            var input = document.getElementById('pac-input');
-        var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-        // Bias the SearchBox results towards current map's viewport.
-        map.addListener('bounds_changed', function() {
-          searchBox.setBounds(map.getBounds());
-        });
-
-        var markers = [];
-        // Listen for the event fired when the user selects a prediction and retrieve
-        // more details for that place.
-        searchBox.addListener('places_changed', function() {
-          var places = searchBox.getPlaces();
-
-          if (places.length == 0) {
-            return;
-          }
-
-          // Clear out the old markers.
-          markers.forEach(function(marker) {
-            marker.setMap(null);
-          });
-          markers = [];
-
-          // For each place, get the icon, name and location.
-          var bounds = new google.maps.LatLngBounds();
-          places.forEach(function(place) {
-            if (!place.geometry) {
-              console.log("Returned place contains no geometry");
-              return;
-            }
-            var icon = {
-              url: place.icon,
-              size: new google.maps.Size(71, 71),
-              origin: new google.maps.Point(0, 0),
-              anchor: new google.maps.Point(17, 34),
-              scaledSize: new google.maps.Size(25, 25)
-            };
-
-            // Create a marker for each place.
-            markers.push(new google.maps.Marker({
-              map: map,
-              icon: icon,
-              title: place.name,
-              position: place.geometry.location
-            }));
-
-            if (place.geometry.viewport) {
-              // Only geocodes have viewport.
-              bounds.union(place.geometry.viewport);
-            } else {
-              bounds.extend(place.geometry.location);
-            }
-          });
-          map.fitBounds(bounds);
-        });
-           google.maps.event.addListener(marker,'click',function() {
-        var infowindow = new google.maps.InfoWindow({
-            content:"Would you like to register an event?"
-        });
-    infowindow.open(map,marker);
-    });
-
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK8jHbaT7yQ1lnq5U_EMVBxbl6VwGjDKM&libraries=places&callback=initMap"
-        async defer></script>
+        request.open('GET', url, true);
+        request.send(null);
+      }
+      
+      function doNothing () {
+      }
+  </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI3Ik9VOK5v_-7My9qI_dHAnZ7lvaQZcY&libraries=places&callback=initMap"></script>
   </body>
 </html>
