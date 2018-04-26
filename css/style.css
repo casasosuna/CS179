@@ -1,10 +1,29 @@
-.image {
-  padding-left: 300px;
+h1 {
+  font-size: 50px;
 }
 
-#section-intro {
-  border-color: #2f6d07;
-  border-width: 50px 15px;
+.intro h4 {
+  padding-left: 200px;
+  color: white;
+}
+
+.intro-2 h4 {
+  padding-left: 270px;
+  color: white;
+}
+
+.intro-3 h4 {
+  padding-left: 270px;
+  color: white;
+}
+
+.intro-4 h4 {
+  padding-left: 250px;
+  color: white;
+}
+
+.image {
+  padding-left: 300px;
 }
 
 #middle h1 {
@@ -2937,18 +2956,4 @@ body, html {
 #myTable tr.header, #myTable tr:hover {
     /* Add a grey background color to the table header and on hover */
     background-color: #f1f1f1;
-}
-.survey_filter{
-	float: left;
-	margin-top:5em;	
-	margin-bottom: 15px;
-}
-
-.survey_interest{
-	margin-top: 1em;
-	margin-left: 5em;
-}
-#survey_text{
-	margin-top: 1em;
-	margin-left: 5em;
 }
