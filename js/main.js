@@ -119,10 +119,10 @@ RewriteFromStorage();
 $(document).ready(function() {
   $('#fullpage').fullpage({
     //Navigation
-    sectionsColor: ['000000', '#2f6d07', '#7BAABE', 'whitesmoke', '#ccddff'],
+    sectionsColor: ['000000', '#ff9900', '#7BAABE', 'whitesmoke', '#ccddff'],
                 anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
                 menu: '#menu',
-                scrollingSpeed: 1000
+                scrollingSpeed: 1000,
 
   });
 });

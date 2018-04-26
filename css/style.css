@@ -1,3 +1,26 @@
+.container h4 {
+  padding-left: 515px;
+  padding-top: 100px;
+  padding-bottom: 700px;
+  font-size: 40px;
+  color: #ff9900;
+}
+
+.container h2 {
+  padding-left: 540px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font-size: 60px;
+}
+
+.intro-2 h2 {
+  padding-left: 200px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
 h1 {
   font-size: 50px;
 }
@@ -8,7 +31,7 @@ h1 {
 }
 
 .intro-2 h4 {
-  padding-left: 270px;
+  padding-left: 310px;
   color: white;
 }
 
