@@ -179,8 +179,8 @@
 	<div class="services" id="creategroupblock">
 		<h3 style="color:#57AF00;">Create a New Group</h3>
 		<div class="wthree_services_grid" style="float: auto; margin-center: 1px;">
-			<div class="col-xs-4 wthree_services_left">
-				<p>
+			<div>
+				<p style="font-weight:bold;">
 					Name of group
 				</p> 
 
@@ -189,7 +189,8 @@
 
 
 				<!-- create days to meet drop down and hours to meet drop down -->
-				<p id="availability">Availability</p>
+				<hr>
+				<p id="availability" style="font-weight:bold;">Availability</p>
 					<label class="container">Monday
 						<input type="checkbox" id="check">
 						<span class="checkmark"></span>
@@ -225,7 +226,13 @@
 							<span class="checkmark"></span>
 						  </label>
 			</div>
-			<div class="col-xs-4 wthree_services_left">
+			<div>
+				<hr>
+				<h4 style="font-weight:bold;">Pick an activity</h4>
+				<p>Pick something you would want to do with a group of old or new friends. 
+					Pick something that you would feel comfortable doing with other people. 
+				</p>
+				<br>
 				<p>Activity</p>
 					<select id="w3_country1" class="frm-field required" name="dropdown">
 						<option value="Dance">Dance</option>  
@@ -238,15 +245,11 @@
 						<option value="Education">Education</option>
 						<option value="Other">Other</option>   						
 					</select>
-				<h4>Pick an activity</h4>
-				<p>Pick something you would want to do with a group of old or new friends. 
-					Pick something that you would feel comfortable doing with other people. 
-				</p>
-
-				<input type="button" onclick="location.href='inside_group.html'" value="Create" id="build" class="btn btn-success"/>
+				
 			</div>
-			<div class="col-xs-4 wthree_services_left">
-				<p>
+			<div>
+				<hr>
+				<p style="font-weight:bold;">
 				Group Description
 				</p>
 				<textarea name="" id="message" rows="9" cols="50" id="mybox"></textarea>
@@ -256,10 +259,10 @@
 					Use this space to highlight what you want out of the group and what makes this group special.
 					How would you like these interactions to work? What are you hoping for (eg. learning more about your passion, practice, people to partipcate with)?
 				</p>
+				<input type="button" onclick="location.href='inside_group.html'" value="Create" id="build" class="btn btn-success"/>
 			</div>			
 			<div class="clearfix"> </div>
 		</div>
-		<img src="images/banner2.jpg" alt="Group Gathering" class="hero-image">
 	</div>
 
 
