@@ -1,16 +1,33 @@
-.intro h3 {
-  font-size: 30px;
-  padding-bottom: 1000px;
-  padding-left: 550px;
-  color: #ff9900;
+.btn btn-success {
+  padding-left: 100px;
+}
+
+.survey-section h1 a {
+  color: #660000;
+}
+
+.survey-button p a {
+  padding: .93em 1.87em;
+  background: #ff9900;
+  border-radius: 5px;
+  color: black;
+}
+
+.intro-first p {
+  padding-bottom: 150px;
+  color: green;
+}
+
+.intro-first {
+  padding-bottom: 200px;
+  padding-left: 350px;
 }
 
 .container h4 {
-  padding-left: 515px;
-  padding-top: 100px;
-  padding-bottom: 700px;
+  padding-bottom: 350px;
   font-size: 40px;
   color: #ff9900;
+  padding-left: 160px;
 }
 
 .container h2 {
@@ -729,7 +746,7 @@ opacity: .1;
     top:10px;
     margin: 0;
     border-left: 1px solid rgba(255,255,255,0.3);
-    color:#FFF !important;
+    color:black !important;
     text-align: center;
 }
 /* Brand Colours */

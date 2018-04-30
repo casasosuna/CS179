@@ -119,7 +119,7 @@ RewriteFromStorage();
 $(document).ready(function() {
   $('#fullpage').fullpage({
     //Navigation
-    sectionsColor: ['000000', '#ff9900', '#7BAABE', 'whitesmoke', '#ccddff'],
+    sectionsColor: ['000000', '#ff9900', '#FFD131', 'whitesmoke', '#ccddff'],
                 anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
                 menu: '#menu',
                 scrollingSpeed: 1000,
