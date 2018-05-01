@@ -36,7 +36,7 @@ function addElement () {
   // create a new div element 
   var newDiv = document.createElement("h1"); 
   // and give it some content 
-  var newContent = document.createTextNode("Group Name: " + getGroupName); 
+  var newContent = document.createTextNode(getGroupName); 
   // add the text node to the newly created div
   newDiv.appendChild(newContent);  
 
