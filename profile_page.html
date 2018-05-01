@@ -1,82 +1,293 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Hobby Match</title> 
-<!-- For-Mobile-Apps-and-Meta-Tags -->
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Matchmaking Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, SmartPhone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //For-Mobile-Apps-and-Meta-Tags -->
-<!-- Custom Theme files -->
-<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-<link href="css/style.css" type="text/css" rel="stylesheet" media="all"> 
-<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
-<!-- //Custom Theme files -->
-<!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
-<!-- //font-awesome icons -->
-<!-- js -->
-<script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
-<!-- //js -->
-<!-- web-fonts -->  
-<link href='//fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-<!-- //web-fonts -->
-<script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+	<head>
+		<title>Hobby Match</title>
+	
+	<!-- For-Mobile-Apps-and-Meta-Tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Matchmaking Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, SmartPhone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //For-Mobile-Apps-and-Meta-Tags -->
+	<!-- Custom Theme files -->
+	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- //Custom Theme files -->
+	<!-- font-awesome icons -->
+	<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- //font-awesome icons -->
+	<!-- js -->
+	<script type='text/javascript' src='js/jquery-2.2.3.min.js'></script>
+	<!-- //js -->
+	<!-- web-fonts -->
+	<link href='//fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<!-- //web-fonts -->
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
 		});
-	});
-</script>
-</head>
-<body class="bg">
-<!-- menu -->
-	<button class="btn-nav w3layouts_btn">
-		<span class="bar arrow-top-r"></span>
-		<span class="bar arrow-middle-r"></span>
-		<span class="bar arrow-bottom-r"></span>
-	</button>
-	<nav class="nav-container hidden hideNav w3_nav">
-	  <ul class="nav-list">
-		<li class="list-item"><a href="main.html"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="about.html"><i class="glyphicon glyphicon-info-sign" aria-hidden="true"></i></a></li>
-		<li class="list-item active"><a href="services.html"><i class="glyphicon glyphicon-cog" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="short-codes.html"><i class="glyphicon glyphicon-text-size" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="gallery.html"><i class="glyphicon glyphicon-picture" aria-hidden="true"></i></a></li>
-		<li class="list-item"><a href="contact.html"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></a></li>
-	  </ul>
-	</nav>
-	<div id="ban" class="agileinfo_menu w3l_menu">
-		<div class="agileinfo_menu_left">
-			<h1><a href="index_holder.html">Hobby Match<span>Find a group of friends. Make new experiences </a></h1>
+	
+		myStorage = window.localStorage;
+		localStorage.setItem('myCat', 'Tom');
+		var cat = localStorage.getItem("myCat");
+		console.log(cat);
+	
+	</script>
+	<!-- //set up code for searchbox google -->
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	</head>
+	<body class="bg" id="main">
+	<!-- menu -->
+		<button class="btn-nav w3layouts_btn">
+			<span class="bar arrow-top-r"></span>
+			<span class="bar arrow-middle-r"></span>
+			<span class="bar arrow-bottom-r"></span>
+		</button>
+		<nav class="nav-container hidden hideNav w3_nav">
+		  <ul class="nav-list">
+			<li class="list-item"><a href="index.html"><i class="glyphicon glyphicon-home" aria-hidden="true"></i></a></li>
+			<li class="list-item"><a href="new_group.html"><i class="glyphicon glyphicon-plus" aria-hidden="true"></i></a></li>
+			<li class="list-item"><a href="search.html"><i class="glyphicon glyphicon-search" aria-hidden="true"></i></a></li>
+			<li class="list-item"><a href="group_list.html"><i class="glyphicon glyphicon-list" aria-hidden="true"></i></a></li>
+			<li class="list-item"><a href="profilehome.html"><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i></a></li>
+		  </ul>
+		</nav>
+		<div id="ban" class="agileinfo_menu w3l_menu">
+			<div class="agileinfo_menu_left">
+				<h1><a href="index.html">Hobby Match<span>Find a group of friends. Make new experiences </a></h1>
+			</div>
+			<div class="agileinfo_menu_right">
+				<ul>
+					<li><a href="#small-dialog" class="play-icon popup-with-zoom-anim">Sign In</a></li>
+					<li><a href="#small-dialog1" class="play-icon popup-with-zoom-anim">Sign Up</a></li>
+				</ul>
+				<div class="agileinfo_menu_right_pos">
+					<p>Or</p>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+
 		</div>
-		<div class="agileinfo_menu_right">
-			<ul>
-				<li><a href="#small-dialog" class="play-icon popup-with-zoom-anim">Sign In</a></li>
-				<li><a href="#small-dialog1" class="play-icon popup-with-zoom-anim">Sign Up</a></li>
-			</ul>
-			<div class="agileinfo_menu_right_pos">
-				<p>Or</p>
+	<!-- //menu -->
+	<!-- pop-up-box -->
+		<div id="small-dialog" class="mfp-hide w3ls_small_dialog">
+			<h2>Sign In</h2>
+			<div class="modal-body agileits_modal_body">
+				 <form action="#" method="post">
+					<span>
+						<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+						<input type="email" name="Email" placeholder="Email" required=""/>
+					</span>
+					<span class="w3_modal">
+						<i class="glyphicon glyphicon-lock" aria-hidden="true"></i>
+						<input type="text" name="Password" placeholder="Password" required=""/>
+					</span>
+					<div class="agile_remember">
+						<div class="agile_remember_left">
+							<div class="check">
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>remember me</label>
+							</div>
+						</div>
+						<div class="agile_remember_right">
+							<a href="#">Forgot Password?</a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<input type="submit" value="Sign In">
+				</form>
+				<h5>Don't have an account? <a href="#small-dialog1" class="play-icon popup-with-zoom-anim">Sign Up</a></h5>
 			</div>
 		</div>
-		<div class="clearfix"> </div>
-	</div>
-<!-- //menu -->
+		<div id="small-dialog1" class="mfp-hide">
+			<h2>Sign Up</h2>
+			<div class="modal-body w3_agileits_modal_body">
+				<form action="#" method="post">
+					<div class="w3_modal_body_grid">
+					</div>
+					<div class="w3_modal_body_grid w3_modal_body_grid1">
+						<span>Name</span>
+						<input type="text" name="Name" placeholder=" " required=""/>
+					</div>
+					<div class="w3_modal_body_grid">
+						<span>Gender</span>
+						<div class="w3_gender">
+							<div class="colr ert">
+								<label class="radio"><input type="radio" name="radio" checked=""><i></i>Male</label>
+							</div>
+							<div class="colr">
+								<label class="radio"><input type="radio" name="radio"><i></i>Female</label>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="w3_modal_body_grid w3_modal_body_grid1">
+						<span>Date Of Birth</span>
+						<input class="date" id="datepicker" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}" required="">
+					</div>
+					<div class="w3_modal_body_grid">
+	
+					</div>
+					<div class="w3_modal_body_grid w3_modal_body_grid1">
+					</div>
+					<div class="w3_modal_body_grid">
+						<span>Email</span>
+						<input type="email" name="Email" placeholder=" " required=""/>
+					</div>
+					<div class="w3_modal_body_grid w3_modal_body_grid1">
+						<span>Password</span>
+						<input type="password" name="Password" placeholder=" " required=""/>
+					</div>
+					<input type="submit" value="Sign Up">
+				</form>
+				<!-- Calendar -->
+					<link rel="stylesheet" href="css/jquery-ui.css" />
+					<script src="js/jquery-ui.js"></script>
+					  <script>
+							  $(function() {
+								$( "#datepicker" ).datepicker();
+							  });
+					  </script>
+				<!-- //Calendar -->
+				</div>
+				<h5>Already a member <a href="#small-dialog" class="play-icon popup-with-zoom-anim">Sign In</a></h5>
+			</div>
+		</div>
+					<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+					<script>
+						$(document).ready(function() {
+						$('.popup-with-zoom-anim').magnificPopup({
+							type: 'inline',
+							fixedContentPos: false,
+							fixedBgPos: true,
+							overflowY: 'auto',
+							closeBtnInside: true,
+							preloader: false,
+							midClick: true,
+							removalDelay: 300,
+							mainClass: 'my-mfp-zoom-in'
+						});
+	
+						});
+					</script>
+	<!--//pop-up-box -->
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		
+		<meta charset="utf-8">
+		<title>Places Searchbox</title>
+		<style>
+		  /* Always set the map height explicitly to define the size of the div
+		   * element that contains the map. */
+		  #map {
+			height: 100%;
+		  }
+		  /* Optional: Makes the sample page fill the window. */
+		  html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		  }
+		  #description {
+			font-family: Roboto;
+			font-size: 15px;
+			font-weight: 300;
+		  }
+	
+		  #infowindow-content .title {
+			font-weight: bold;
+		  }
+	
+		  #infowindow-content {
+			display: none;
+		  }
+	
+		  #map #infowindow-content {
+			display: inline;
+		  }
+	
+		  .pac-card {
+			margin: 10px 10px 0 0;
+			border-radius: 2px 0 0 2px;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			outline: none;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+			background-color: #fff;
+			font-family: Roboto;
+		  }
+	
+		  #pac-container {
+			padding-bottom: 12px;
+			margin-right: 12px;
+		  }
+	
+		  .pac-controls {
+			display: inline-block;
+			padding: 5px 11px;
+		  }
+	
+		  .pac-controls label {
+			font-family: Roboto;
+			font-size: 13px;
+			font-weight: 300;
+		  }
+	
+		  #pac-input {
+			background-color: #fff;
+			font-family: Roboto;
+			font-size: 15px;
+			font-weight: 300;
+			margin-left: 12px;
+			padding: 0 11px 0 13px;
+			text-overflow: ellipsis;
+			width: 400px;
+		  }
+	
+		  #pac-input:focus {
+			border-color: #4d90fe;
+		  }
+	
+		  #title {
+			color: #fff;
+			background-color: #4d90fe;
+			font-size: 25px;
+			font-weight: 500;
+			padding: 6px 12px;
+		  }
+		  #target {
+			width: 345px;
+		  }
+		</style>
+	  </head>
+</head>
+<body class="bg">
+
 <!-- pop-up-box -->
 	<div id="small-dialog" class="mfp-hide w3ls_small_dialog">
 		<h2>Sign In</h2>		
 		<div class="modal-body agileits_modal_body">
-			 <form action="profile_page.html" method="post">
+			 <form action="#" method="post">
 				<span>
 					<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
-					<input type="email" name="Email" placeholder="Email" required="" value="myemail@college.harvard.edu"/>
+					<input type="email" name="Email" placeholder="Email" required=""/>
 				</span>
 				<span class="w3_modal">
 					<i class="glyphicon glyphicon-lock" aria-hidden="true"></i>
-					<input type="text" name="Password" placeholder="Password" required="" value="*********"/>
+					<input type="text" name="Password" placeholder="Password" required=""/>
 				</span>
 				<div class="agile_remember">
 					<div class="agile_remember_left">
@@ -91,18 +302,48 @@
 				</div>
 				<input type="submit" value="Sign In">
 			</form>
+			<h4>Continue With</h4>
+			<div class="social_icons agileinfo_social_asd">
+				<!-- Facebook -->
+				<a href="#" class="slide-social wthree_slide_social">
+					<div class="button">5 Likes</div>
+					<div class="facebook icon"> <i class="fa fa-facebook" aria-hidden="true"></i> </div>
+					<div class="facebook slide">
+						<p>Facebook</p>
+					</div>
+				</a>
+				<!-- Twitter -->
+				<a href="#" class="slide-social wthree_slide_social">
+					<div class="button">8 Tweets</div>
+					<div class="twitter icon"> <i class="fa fa-twitter" aria-hidden="true"></i> </div>
+					<div class="twitter slide">
+						<p>Twitter</p>
+					</div>
+				</a>
+			</div>
 			<h5>Don't have an account? <a href="#small-dialog1" class="play-icon popup-with-zoom-anim">Sign Up</a></h5>
 		</div>
 	</div>
 	<div id="small-dialog1" class="mfp-hide">
 		<h2>Sign Up</h2>		
 		<div class="modal-body w3_agileits_modal_body">
-			<form action="profile_page.html" method="post">
+			<form action="#" method="post">
 				<div class="w3_modal_body_grid">
+					<span>Profile For</span>
+					<select id="w3_country" onchange="change_country(this.value)" class="frm-field required">
+						<option value="null">Select</option>
+						<option value="null">Myself</option>   
+						<option value="null">Son</option>   
+						<option value="null">Daughter</option>   
+						<option value="null">Brother</option>   
+						<option value="null">Sister</option>  
+						<option value="null">Relative</option>
+						<option value="null">Friend</option>						
+					</select>
 				</div>
 				<div class="w3_modal_body_grid w3_modal_body_grid1">
 					<span>Name</span>
-					<input type="text" name="Name" placeholder=" " required="" value="Enrique"/>
+					<input type="text" name="Name" placeholder=" " required=""/>
 				</div>
 				<div class="w3_modal_body_grid">
 					<span>Gender</span>
@@ -122,17 +363,28 @@
 					<input class="date" id="datepicker" name="Text" type="text" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '2/08/2013';}" required="">
 				</div>
 				<div class="w3_modal_body_grid">
-					
+					<span>religion</span>
+					<select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
+						<option value="null">Hindu</option>  
+						<option value="null">Muslim</option>   
+						<option value="null">Christian</option>   
+						<option value="null">Sikh</option>   
+						<option value="null">Jain</option>   
+						<option value="null">Buddhist</option>
+						<option value="null">No Religious Belief</option>   						
+					</select>
 				</div>
 				<div class="w3_modal_body_grid w3_modal_body_grid1">
+					<span>Country</span>
+					<input type="text" name="Country" placeholder=" " required=""/>
 				</div>
 				<div class="w3_modal_body_grid">
 					<span>Email</span>
-					<input type="email" name="Email" placeholder=" " required="" value="myemail@college.harvard.edu"/>
+					<input type="email" name="Email" placeholder=" " required=""/>
 				</div>
 				<div class="w3_modal_body_grid w3_modal_body_grid1">
 					<span>Password</span>
-					<input type="password" name="Password" placeholder=" " required="" value="*******"/>
+					<input type="password" name="Password" placeholder=" " required=""/>
 				</div>
 				<input type="submit" value="Sign Up">
 			</form>
@@ -145,6 +397,24 @@
 						  });
 				  </script>
 			<!-- //Calendar -->
+			<h4>Continue With</h4>
+			<div class="social_icons agileits_w3layouts_cons">
+				<!-- Facebook -->
+				<a href="#" class="slide-social">
+					<div class="button">5 Likes</div>
+					<div class="facebook icon agile_facebook"> <i class="fa fa-facebook" aria-hidden="true"></i> </div>
+					<div class="facebook slide">
+						<p>Facebook</p>
+					</div>
+				</a>
+				<!-- Twitter -->
+				<a href="#" class="slide-social">
+					<div class="button">8 Tweets</div>
+					<div class="twitter icon w3_agile_twitter"> <i class="fa fa-twitter" aria-hidden="true"></i> </div>
+					<div class="twitter slide">
+						<p>Twitter</p>
+					</div>
+				</a>
 			</div>
 			<h5>Already a member <a href="#small-dialog" class="play-icon popup-with-zoom-anim">Sign In</a></h5>
 		</div>
@@ -168,25 +438,100 @@
 				</script>
 <!--//pop-up-box -->
 <!-- banner -->
-	
+	<div class="banner1">
+		<h3>Hello Guest, Your Survey Results are:</h3>
+	</div>
 <!-- //banner -->
-<!-- services -->
-	
-<!-- //services -->
-<!-- services-bottom -->
-	
-<!-- //services-bottom -->
-<!-- footer -->
-	<div class="footer">
-		
-		<div class="footer-copy">
-			<div class="w3agile_footer_grids">
-				
+<!-- your-search -->
+	<div class="your-search">
+		<div class="agileinfo_your_search_left">
+			
+		</div>
+		<div class="agileinfo_your_search_right">
+			<h3>Your search results</h3>
+			<div class="agileinfo_your_search_right_grid">
+				<div class="agileinfo_search_grid_left">
+					<img src="images/16.jpg" alt=" " class="img-responsive" />
+					<a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Chat Now</a>
+				</div>
+				<h4>Group Leader: Enrique</h4>
+				<div class="agileinfo_search_grid_right">
+					<ul>
+						<li><span>Group Name</span> : Vamos Juntos!</li>
+						<li><span>Hobby</span> : Learning Languages, Spanish</li>
+						<li><span>Location</span> : Copley Square</li>
+						<li><span>Level</span> : Beginners</li>
+						<li><span>Time</span> : Mon-Fri, 3-4PM</li>
+					</ul>
+					<p>If you're just starting out learning spanish, join us for some fun and free food!</p>
+				</div>
 				<div class="clearfix"> </div>
+				<div class="agileinfo_your_search_right_grid_sub">
+					
+				</div>
+			</div>
+			<div class="agileinfo_your_search_right_grid">
+				<h4>Group Leader: Bentley</h4>
+				<div class="agileinfo_search_grid_left">
+					<img src="images/17.jpg" alt=" " class="img-responsive" />
+					<a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Chat Now</a>
+				</div>
+				<div class="agileinfo_search_grid_right">
+					<ul>
+						<li><span>Group Name</span> : Parles-tu Français ?</li>
+						<li><span>Hobby</span> : Learning Languages, French</li>
+						<li><span>Location</span> : Harvard Square, Tatte's</li>
+						<li><span>Level</span> : Beginner, Intermediate </li>
+						<li><span>Time</span> : Mon, Weds, Fri 10-11AM</li>
+					</ul>
+					<p>Intermediates are paired with beginners for learning conversation. Free coffee and sandwiches.</p>
+				</div>
+				<div class="clearfix"> </div>
+				<div class="agileinfo_your_search_right_grid_sub">
+					
+				</div>
+			</div>
+			<div class="agileinfo_your_search_right_grid">
+				<h4>Group Leader: Emmeline</h4>
+				<div class="agileinfo_search_grid_left">
+					<img src="images/16.jpg" alt=" " class="img-responsive" />
+					<a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Chat Now</a>
+				</div>
+				<div class="agileinfo_search_grid_right">
+					<ul>
+						<li><span>Group Name</span> : Portguese for Beginners</li>
+						<li><span>Hobby</span> : Learning Languages, Portugese </li>
+						<li><span>Location</span> : Sever Hall</li>
+						<li><span>Level</span> : Beginners</li>
+						<li><span>Time</span> : Thursday and Friday, 6-7PM</li>
+					</ul>
+					<p>Come learn Portugese with us! Free brazilian food during every class</p>
+				</div>
+				<div class="clearfix"> </div>
+				<div class="agileinfo_your_search_right_grid_sub">
+					
+				</div>
 			</div>
 		</div>
+		<div class="clearfix"> </div>
+		<nav class="w3agile_paging" aria-label="Page navigation">
+		  <ul class="pagination">
+			<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+			<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li>
+			  <a href="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+			  </a>
+			</li>
+		  </ul>
+		</nav>
 	</div>
-<!-- //footer -->
+<!-- //your-search -->
+
 <!-- nav -->
 <script>
  $(window).load(function() {
